@@ -256,6 +256,125 @@ app.get('/fee', (req, res) => {
             "nonotpaid": 60,
             "cashpaid": 3392043,
             "cashpending": 321839243
+          },{
+            "id": "ajflsdkfjalfasdfa",
+            "termid": "fasdfalskdfasfdsf",
+            "duedate": "24-04-2024",
+            "class": 1,
+            "section": "A",
+            "Year": 2024,
+            "nopaid": 30,
+            "nonotpaid": 50,
+            "cashpaid": 3512392,
+            "cashpending": 312839123
+          },
+          {
+            "id": "afdkl;asdflkajls",
+            "termid": "fasdfalskdfasfdsf",
+            "duedate": "24-05-2024",
+            "class": 2,
+            "section": "A",
+            "Year": 2024,
+            "nopaid": 25,
+            "nonotpaid": 45,
+            "cashpaid": 3278456,
+            "cashpending": 315839200
+          },
+          {
+            "id": "fasdfalskdfasfdsf",
+            "termid": "fasdfalskdfasfdsf",
+            "duedate": "24-06-2024",
+            "class": 3,
+            "section": "A",
+            "Year": 2024,
+            "nopaid": 22,
+            "nonotpaid": 42,
+            "cashpaid": 3392023,
+            "cashpending": 321839223
+          },
+          {
+            "id": "fjalsdfasfjal;sf",
+            "termid": "fasdfalskdfasfdsf",
+            "duedate": "24-07-2024",
+            "class": 4,
+            "section": "A",
+            "Year": 2024,
+            "nopaid": 28,
+            "nonotpaid": 48,
+            "cashpaid": 3739284,
+            "cashpending": 319823400
+          },
+          {
+            "id": "fjasdfajsdfalskj",
+            "termid": "fasdfalskdfasfdsf",
+            "duedate": "24-08-2024",
+            "class": 5,
+            "section": "A",
+            "Year": 2024,
+            "nopaid": 33,
+            "nonotpaid": 53,
+            "cashpaid": 3894246,
+            "cashpending": 311839122
+          },
+          {
+            "id": "asdfjalsdfjasldf",
+            "termid": "fasdfalskdfasfdsf",
+            "duedate": "24-09-2024",
+            "class": 6,
+            "section": "A",
+            "Year": 2024,
+            "nopaid": 27,
+            "nonotpaid": 47,
+            "cashpaid": 3563829,
+            "cashpending": 314839099
+          },
+          {
+            "id": "fjasd;fjasdfljasd",
+            "termid": "fasdfalskdfasfdsf",
+            "duedate": "24-10-2024",
+            "class": 7,
+            "section": "A",
+            "Year": 2024,
+            "nopaid": 31,
+            "nonotpaid": 51,
+            "cashpaid": 3678456,
+            "cashpending": 313839200
+          },
+          {
+            "id": "fasdfjalsdfjalsdf",
+            "termid": "fasdfalskdfasfdsf",
+            "duedate": "24-11-2024",
+            "class": 8,
+            "section": "A",
+            "Year": 2024,
+            "nopaid": 29,
+            "nonotpaid": 49,
+            "cashpaid": 3789246,
+            "cashpending": 312839122
+          },
+          {
+            "id": "fasdfl;aksjdfasdf",
+            "termid": "fasdfalskdfasfdsf",
+            "duedate": "24-12-2024",
+            "class": 9,
+            "section": "A",
+            "Year": 2024,
+            "nopaid": 26,
+            "nonotpaid": 46,
+            "cashpaid": 3653829,
+            "cashpending": 315839099
+          },
+          {
+            "id": "asdfjalsdfjalsdkf",
+            "termid": "fasdfalskdfasfdsf",
+            "duedate": "24-01-2025",
+            "class": 10,
+            "section": "A",
+            "Year": 2024,
+            "nopaid": 32,
+            "nonotpaid": 52,
+            "cashpaid": 3798456,
+            "cashpending": 311839200
           }
       ]
       );
@@ -279,125 +398,6 @@ app.get('/fee', (req, res) => {
         "year": 2024,
         "duedate": "24/10/2024",
         "Term": 3
-      },{
-        "id": "ajflsdkfjalfasdfa",
-        "termid": "fasdfalskdfasfdsf",
-        "duedate": "24-04-2024",
-        "class": 1,
-        "section": "A",
-        "Year": 2024,
-        "nopaid": 30,
-        "nonotpaid": 50,
-        "cashpaid": 3512392,
-        "cashpending": 312839123
-      },
-      {
-        "id": "afdkl;asdflkajls",
-        "termid": "fasdfalskdfasfdsf",
-        "duedate": "24-05-2024",
-        "class": 2,
-        "section": "A",
-        "Year": 2024,
-        "nopaid": 25,
-        "nonotpaid": 45,
-        "cashpaid": 3278456,
-        "cashpending": 315839200
-      },
-      {
-        "id": "fasdfalskdfasfdsf",
-        "termid": "fasdfalskdfasfdsf",
-        "duedate": "24-06-2024",
-        "class": 3,
-        "section": "A",
-        "Year": 2024,
-        "nopaid": 22,
-        "nonotpaid": 42,
-        "cashpaid": 3392023,
-        "cashpending": 321839223
-      },
-      {
-        "id": "fjalsdfasfjal;sf",
-        "termid": "fasdfalskdfasfdsf",
-        "duedate": "24-07-2024",
-        "class": 4,
-        "section": "A",
-        "Year": 2024,
-        "nopaid": 28,
-        "nonotpaid": 48,
-        "cashpaid": 3739284,
-        "cashpending": 319823400
-      },
-      {
-        "id": "fjasdfajsdfalskj",
-        "termid": "fasdfalskdfasfdsf",
-        "duedate": "24-08-2024",
-        "class": 5,
-        "section": "A",
-        "Year": 2024,
-        "nopaid": 33,
-        "nonotpaid": 53,
-        "cashpaid": 3894246,
-        "cashpending": 311839122
-      },
-      {
-        "id": "asdfjalsdfjasldf",
-        "termid": "fasdfalskdfasfdsf",
-        "duedate": "24-09-2024",
-        "class": 6,
-        "section": "A",
-        "Year": 2024,
-        "nopaid": 27,
-        "nonotpaid": 47,
-        "cashpaid": 3563829,
-        "cashpending": 314839099
-      },
-      {
-        "id": "fjasd;fjasdfljasd",
-        "termid": "fasdfalskdfasfdsf",
-        "duedate": "24-10-2024",
-        "class": 7,
-        "section": "A",
-        "Year": 2024,
-        "nopaid": 31,
-        "nonotpaid": 51,
-        "cashpaid": 3678456,
-        "cashpending": 313839200
-      },
-      {
-        "id": "fasdfjalsdfjalsdf",
-        "termid": "fasdfalskdfasfdsf",
-        "duedate": "24-11-2024",
-        "class": 8,
-        "section": "A",
-        "Year": 2024,
-        "nopaid": 29,
-        "nonotpaid": 49,
-        "cashpaid": 3789246,
-        "cashpending": 312839122
-      },
-      {
-        "id": "fasdfl;aksjdfasdf",
-        "termid": "fasdfalskdfasfdsf",
-        "duedate": "24-12-2024",
-        "class": 9,
-        "section": "A",
-        "Year": 2024,
-        "nopaid": 26,
-        "nonotpaid": 46,
-        "cashpaid": 3653829,
-        "cashpending": 315839099
-      },
-      {
-        "id": "asdfjalsdfjalsdkf",
-        "termid": "fasdfalskdfasfdsf",
-        "duedate": "24-01-2025",
-        "class": 10,
-        "section": "A",
-        "Year": 2024,
-        "nopaid": 32,
-        "nonotpaid": 52,
-        "cashpaid": 3798456,
-        "cashpending": 311839200
       }
       ]);
   });
