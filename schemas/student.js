@@ -17,6 +17,10 @@ const studentSchema = new mongoose.Schema({
   admission_no: {
     type: String,
     required: true
+  },
+  active:{
+    type:Boolean,
+    default:true
   }
 });
 
