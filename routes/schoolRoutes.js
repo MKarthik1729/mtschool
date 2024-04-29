@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { createClass, updateClass, addStudentId, addNewSubject } = require('../controllers/schoolController');
+const { createClass, updateClass, addStudentId, addNewSubject, getAllStudentsByClassId } = require('../controllers/schoolController');
 
 // Route to create a new class
 router.post('/createClass', async (req, res) => {
@@ -37,6 +37,14 @@ router.put('/addNewSubject/:classId', async (req, res) => {
     try {
         const updatedClass = await addNewSubject(req.params.classId, req.body.newSubject);
         res.json(updatedClass);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+});
+router.get('/getAllStudents/:classId', async (req, res) => {
+    try {
+        const students = await getAllStudentsByClassId(req.params.classId);
+        res.json(students);
     } catch (error) {
         res.status(400).json({ error: error.message });
     }

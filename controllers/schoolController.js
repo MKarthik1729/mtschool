@@ -41,9 +41,22 @@ async function addNewSubject(classId, newSubject) {
     }
 }
 
+async function getAllStudentsByClassId(classId) {
+    try {
+        const schoolClass = await SchoolClass.findById(classId).populate('students');
+        if (!schoolClass) {
+            throw new Error('Class not found');
+        }
+        return schoolClass.students;
+    } catch (error) {
+        throw new Error(error.message);
+    }
+}
+
 module.exports = {
     createClass,
     updateClass,
     addNewSubject,
-    addStudentId
+    addStudentId,
+    getAllStudentsByClassId
   };
