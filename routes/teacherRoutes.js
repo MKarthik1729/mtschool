@@ -3,7 +3,7 @@ const router = express.Router();
 const { addNewTeacher, getAllTeachers, updateTeacher } = require('../controllers/teacherController');
 
 // Route to add a new teacher
-router.post('/addteacher', async (req, res) => {
+router.post('/createteacher', async (req, res) => {
   try {
     const { name, mobile, class_dealing, active } = req.body;
     const newTeacher = await addNewTeacher(name, mobile, class_dealing, active);
@@ -14,7 +14,7 @@ router.post('/addteacher', async (req, res) => {
 });
 
 // Route to update a teacher
-router.put('/updateteacher/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const update = req.body;
