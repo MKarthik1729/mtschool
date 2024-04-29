@@ -9,6 +9,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use('/admin',require('./routes/adminRoutes'))
+app.use('/school',require('./routes/schoolRoutes'))
 app.use('/student',require('./routes/studentRoutes'))
 app.use('/teacher',require('./routes/teacherRoutes'))
 // Define some routes
