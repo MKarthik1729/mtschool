@@ -32,8 +32,18 @@ async function deleteStudentById(studentId) {
   }
 }
 
+async function getAllStudents() {
+    try {
+      const teachers = await Student.find({});
+      return teachers;
+    } catch (error) {
+      throw error;
+    }
+  }
+
 module.exports = {
   createStudent,
   updateStudentById,
-  deleteStudentById
+  deleteStudentById,
+  getAllStudents
 };

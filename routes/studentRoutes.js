@@ -4,7 +4,8 @@ const router = express.Router();
 const {
   createStudent,
   updateStudentById,
-  deleteStudentById
+  deleteStudentById,
+  getAllStudents
 } = require('../controllers/studentController');
 router.get('/', (req, res) => {
   res.send('Hello from routes!');
@@ -45,6 +46,15 @@ router.delete('/:id', async (req, res) => {
     res.json({ message: 'Student deleted successfully' });
   } catch (error) {
     res.status(400).json({ message: error.message });
+  }
+});
+
+router.get('/getallstudents', async (req, res) => {
+  try {
+    const teachers = await getAllStudents();
+    res.json(teachers);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
 });
 
