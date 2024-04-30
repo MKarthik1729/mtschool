@@ -53,10 +53,22 @@ async function getAllStudentsByClassId(classId) {
     }
 }
 
+
+async function getAllClasses() {
+    try {
+      const teachers = await SchoolClass.find({});
+      return teachers;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+
 module.exports = {
     createClass,
     updateClass,
     addNewSubject,
     addStudentId,
-    getAllStudentsByClassId
+    getAllStudentsByClassId,
+    getAllClasses
   };

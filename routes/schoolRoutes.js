@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { createClass, updateClass, addStudentId, addNewSubject, getAllStudentsByClassId } = require('../controllers/schoolController');
+const { createClass, updateClass, addStudentId, addNewSubject, getAllStudentsByClassId,
+getAllClasses
+} = require('../controllers/schoolController');
 
 // Route to create a new class
 router.post('/createClass', async (req, res) => {
@@ -49,5 +51,14 @@ router.get('/getAllStudents/:classId', async (req, res) => {
         res.status(400).json({ error: error.message });
     }
 });
+
+router.get('/getallclasses', async (req, res) => {
+    try {
+      const teachers = await getAllClasses();
+      res.json(teachers);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
 
 module.exports = router;
