@@ -12,6 +12,7 @@ app.use('/admin',require('./routes/adminRoutes'))
 app.use('/school',require('./routes/schoolRoutes'))
 app.use('/student',require('./routes/studentRoutes'))
 app.use('/teacher',require('./routes/teacherRoutes'))
+app.use('/subject',require('./routes/subjectRoutes'))
 // Define some routes
 app.get('/', (req, res) => {
   res.send('Hello World!');
