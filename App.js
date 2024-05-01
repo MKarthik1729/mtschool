@@ -13,6 +13,7 @@ app.use('/school',require('./routes/schoolRoutes'))
 app.use('/student',require('./routes/studentRoutes'))
 app.use('/teacher',require('./routes/teacherRoutes'))
 app.use('/subject',require('./routes/subjectRoutes'))
+app.use('/dairy',require('./routes/dairyRoutes'))
 // Define some routes
 app.get('/', (req, res) => {
   res.send('Hello World!');
