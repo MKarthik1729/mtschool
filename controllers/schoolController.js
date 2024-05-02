@@ -56,13 +56,23 @@ async function getAllStudentsByClassId(classId) {
 
 async function getAllClasses() {
     try {
-      const teachers = await SchoolClass.find({});
+      const teachers = await SchoolClass.find().sort({ class_dealing: 1, class_section: 1 });
       return teachers;
     } catch (error) {
       throw error;
     }
   }
 
+  async function getClassesWithoutTeacher() {
+    console.log("hello")
+    try {
+        const classesWithoutTeacher = await SchoolClass.find({ class_teacher: { $exists: false, $eq: null } });
+        console.log(classesWithoutTeacher)
+        return classesWithoutTeacher;
+    } catch (error) {
+        throw new Error(error.message);
+    }
+}
 
 module.exports = {
     createClass,
@@ -70,5 +80,6 @@ module.exports = {
     addNewSubject,
     addStudentId,
     getAllStudentsByClassId,
-    getAllClasses
+    getAllClasses,
+    getClassesWithoutTeacher
   };

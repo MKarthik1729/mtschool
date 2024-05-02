@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { addNewTeacher, getAllTeachers, updateTeacher } = require('../controllers/teacherController');
+const { addNewTeacher, getAllTeachers, updateTeacher, deleteTeacher } = require('../controllers/teacherController');
 
 // Route to add a new teacher
 router.post('/createteacher', async (req, res) => {
@@ -30,6 +30,16 @@ router.get('/getallteachers', async (req, res) => {
   try {
     const teachers = await getAllTeachers();
     res.json(teachers);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+router.delete('/deleteteacher/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    await deleteTeacher(id);
+    res.json({ message: 'Teacher deleted successfully' });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

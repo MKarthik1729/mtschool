@@ -36,8 +36,18 @@ async function updateTeacher(id, update) {
   }
 }
 
+async function deleteTeacher(id) {
+  try {
+    await Teacher.findByIdAndDelete(id);
+  } catch (error) {
+    throw error;
+  }
+}
+
+
 module.exports = {
   addNewTeacher,
   getAllTeachers,
-  updateTeacher
+  updateTeacher,
+  deleteTeacher
 };

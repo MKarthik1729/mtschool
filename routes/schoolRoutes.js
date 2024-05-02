@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { createClass, updateClass, addStudentId, addNewSubject, getAllStudentsByClassId,
-getAllClasses
+getAllClasses,getClassesWithoutTeacher
 } = require('../controllers/schoolController');
 
 // Route to create a new class
@@ -58,6 +58,15 @@ router.get('/getallclasses', async (req, res) => {
       res.json(teachers);
     } catch (error) {
       res.status(500).json({ error: error.message });
+    }
+  });
+
+  router.get('/getClassesWithoutTeacher', async (req, res) => {
+    try {
+        const classesWithoutTeacher = await getClassesWithoutTeacher();
+        res.json(classesWithoutTeacher);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
     }
   });
 
