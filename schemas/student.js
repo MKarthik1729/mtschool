@@ -16,6 +16,16 @@ const studentSchema = new mongoose.Schema({
   fee_bal: {
     type: [Boolean],
     required: true
+  },
+  phone:{
+    type:Number,
+    required:true,
+    default:999999999
+  },
+  admission_no:{
+    type:String,
+    required:true,
+    default:'MTS0000'
   }
 });
 
