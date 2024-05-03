@@ -1,20 +1,30 @@
-// routes.js
 const express = require('express');
 const router = express.Router();
 const {
   createStudent,
   updateStudentById,
   deleteStudentById,
-  getAllStudents
+  getAllStudents,
+  createStudents
 } = require('../controllers/studentController');
+
 router.get('/', (req, res) => {
   res.send('Hello from routes!');
 });
+
 // Create a new student
 router.post('/createstudent', async (req, res) => {
-  console.log(req.body)
   try {
     const newStudent = await createStudent(req.body);
+    res.status(201).json(newStudent);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+});
+
+router.post('/addmultiplestudents', async (req, res) => {
+  try {
+    const newStudent = await createStudents(req.body);
     res.status(201).json(newStudent);
   } catch (error) {
     res.status(400).json({ message: error.message });
@@ -49,10 +59,11 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+// Get all students
 router.get('/getallstudents', async (req, res) => {
   try {
-    const teachers = await getAllStudents();
-    res.json(teachers);
+    const students = await getAllStudents();
+    res.json(students);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

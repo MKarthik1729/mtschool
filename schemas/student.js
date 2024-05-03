@@ -1,4 +1,3 @@
-// studentModel.js
 const mongoose = require('mongoose');
 
 const studentSchema = new mongoose.Schema({
@@ -6,21 +5,17 @@ const studentSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  class: {
-    type: String,
-    required: true
-  },
-  phone: {
+  class_study: {
     type: Number,
     required: true
   },
-  admission_no: {
+  section_study: {
     type: String,
     required: true
   },
-  active:{
-    type:Boolean,
-    default:true
+  fee_bal: {
+    type: [Boolean],
+    required: true
   }
 });
 

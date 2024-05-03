@@ -11,7 +11,14 @@ async function createStudent(studentData) {
     throw error;
   }
 }
-
+async function createStudents(studentDataArray) {
+  try {
+    const newStudents = await Student.insertMany(studentDataArray);
+    return newStudents;
+  } catch (error) {
+    throw error;
+  }
+}
 // Function to update a student by ID
 async function updateStudentById(studentId, updatedData) {
   try {
@@ -32,18 +39,20 @@ async function deleteStudentById(studentId) {
   }
 }
 
+// Function to get all students
 async function getAllStudents() {
-    try {
-      const teachers = await Student.find({});
-      return teachers;
-    } catch (error) {
-      throw error;
-    }
+  try {
+    const students = await Student.find({});
+    return students;
+  } catch (error) {
+    throw error;
   }
+}
 
 module.exports = {
   createStudent,
   updateStudentById,
   deleteStudentById,
-  getAllStudents
+  getAllStudents,
+  createStudents
 };
